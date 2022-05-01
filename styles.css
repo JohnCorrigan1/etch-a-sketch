@@ -21,15 +21,20 @@ body {
     grid-template-columns: repeat(16, 2fr);
     grid-template-rows: repeat(16, 2fr);
     width: 575px;
-    height: 575px;
-   
+    height: 575px; 
+    grid-gap: 0;
 }
 
 .gridDiv {
     background-color: white;
     color: white;
-  border: solid 1px black;
+    border: solid 1px black;
+    display: grid;
 }
 
+
+#gg {
+    margin-top: 5%;
+}
 
 

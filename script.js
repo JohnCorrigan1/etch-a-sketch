@@ -27,7 +27,6 @@ function getDivs(n) {
 
         gridDiv.addEventListener('mouseover', function(event){
             event.target.style.backgroundColor = 'black';
-            
         });
 
         container.appendChild(gridDiv);
@@ -39,7 +38,7 @@ let slider = document.getElementById('slider');
 slider.addEventListener('input', function(){
     let val = document.getElementById('slider').value;
     removeCells();
-    grid.setAttribute('style', 'grid-template-rows: repeat(${val, 2fr); grid-template-columns: repeat(${val}, 2fr);');
+    grid.setAttribute('style', `grid-template-columns: repeat(${val}, 2fr); grid-template-rows: repeat(${val}, 2fr);`);
     for (i = 0; i < val * val; i++) {
         let gridDiv = document.createElement('div');
         gridDiv.classList.add('gridDiv');
