@@ -1,5 +1,8 @@
+
+//container containing grid defualt 16 * 16
 const grid = document.getElementById('container');
 
+//for rgb mode
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -10,7 +13,6 @@ function getRandomColor() {
 }
 
 
-
 function removeCells() {
    let child = grid.lastElementChild;
    while (child) {
@@ -19,7 +21,7 @@ function removeCells() {
    }
 }
 
-
+//creates cells of divs in grid container
 function getDivs(n) {
     let container = document.getElementById("container");
 
@@ -36,10 +38,11 @@ function getDivs(n) {
     }
 };
 
+
 let slider = document.getElementById('slider');
 const sliderVal = document.getElementById('slider-value');
 
-
+//change number of cells based on slider value
 slider.addEventListener('input', function(){
     let val = document.getElementById('slider').value;
     sliderVal.textContent = val;
@@ -57,6 +60,8 @@ slider.addEventListener('input', function(){
     }
 });
 
+
+//reset button functionality sets all divs back to white and mode back to black
 let reset = document.getElementById('reset');
 reset.addEventListener('click', function(){
     removeCells();
@@ -73,6 +78,7 @@ reset.addEventListener('click', function(){
     }
 });
 
+//rgb mode gets random color for each mouseover on grid
 let rgb = document.getElementById('rgb');
 rgb.addEventListener('click', function(){
     let val = document.getElementById('slider').value;
@@ -85,5 +91,5 @@ rgb.addEventListener('click', function(){
   
 });
 
-
+//default 16 * 16 grid
 getDivs(256);
