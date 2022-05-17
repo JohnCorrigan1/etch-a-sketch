@@ -12,7 +12,6 @@ function getRandomColor() {
     return color;
 }
 
-
 function removeCells() {
    let child = grid.lastElementChild;
    while (child) {
