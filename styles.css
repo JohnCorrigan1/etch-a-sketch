@@ -31,7 +31,6 @@ body {
 .gridDiv {
     background-color: white;
     color: white;
-    border: solid 1px black;
     display: grid;
 }
 
